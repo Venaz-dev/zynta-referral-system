@@ -1,6 +1,6 @@
 # Zynta Referral System
 
-A full-stack referral system built with Node.js/Express backend and vanilla HTML/CSS/JavaScript frontend,
+A full-stack referral system built with Node.js/Express backend and vanilla HTML/CSS/JavaScript frontend
 
 ## 📋 API Endpoints
 
