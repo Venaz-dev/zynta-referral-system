@@ -1,0 +1,28 @@
+{
+  "name": "zynta-referral-system",
+  "version": "1.0.0",
+  "description": "A referral system for Zynta with Node.js backend and HTML/CSS/JS frontend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "referral",
+    "system",
+    "nodejs",
+    "express",
+    "zynta"
+  ],
+  "author": "Chibuzo Madumere",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

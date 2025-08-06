@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zynta Referral System - Join & Earn Rewards</title>
+    <meta
+      name="description"
+      content="Join Zynta's referral program and earn 10 points for each successful referral. Create your account and start building our community."
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-content fade-in">
+          <div class="logo">
+            <img
+              src="https://zynta.com/wp-content/uploads/2025/06/zynta-logo.svg"
+              alt=""
+            />
+          </div>
+          <h1 class="title">Referral System - <em>Join & Earn Rewards</em></h1>
+          <p class="subtitle">
+            Facilitating community growth through our advanced referral
+            infrastructure
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <div class="grid">
+          <!-- Animated Rings -->
+          <div class="rings-container">
+            <div class="ring ring-1"></div>
+            <div class="ring ring-2"></div>
+            <div class="ring ring-3"></div>
+          </div>
+          <!-- Registration Form -->
+          <div class="card">
+            <div class="card-header">
+              <h2 class="card-title">
+                <div class="icon-cont">
+                  <svg
+                    width="20"
+                    height="20"
+                    fill="none"
+                    stroke="#0e141b"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"
+                    ></path>
+                  </svg>
+                </div>
+                Join Our Community
+              </h2>
+              <p class="card-description">
+                Sign up today and start earning rewards through our referral
+                program.
+              </p>
+            </div>
+
+            <form id="referral-form">
+              <div class="form-group">
+                <label class="label" for="name">Full Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  class="input"
+                  placeholder="Enter your full name"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label class="label" for="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  class="input"
+                  placeholder="Enter your email address"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label class="label" for="referralCode"
+                  >Referral Code (Optional)</label
+                >
+                <input
+                  type="text"
+                  id="referralCode"
+                  class="input"
+                  placeholder="Enter referral code"
+                  maxlength="6"
+                />
+              </div>
+
+              <button
+                type="submit"
+                class="button button-primary"
+                id="submit-btn"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                  ></path>
+                </svg>
+                Create Account & Get Your Code
+              </button>
+            </form>
+
+            <!-- Registration Form End -->
+
+            <!-- Welcome Message (after registration) -->
+            <div
+              id="welcome-message"
+              class="welcome-message"
+              style="display: none"
+            >
+              <div class="welcome-icon">
+                <svg
+                  width="48"
+                  height="48"
+                  fill="none"
+                  stroke="var(--primary)"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+              </div>
+              <h2 class="welcome-title">
+                Welcome to Zynta's referral program!
+              </h2>
+              <p class="welcome-text">
+                Your account has been created successfully.
+              </p>
+              <div class="referral-code-container">
+                <p>Your Referral Code:</p>
+                <div class="referral-code-display">
+                  <span
+                    id="user-referral-code"
+                    class="referral-code-text"
+                  ></span>
+                  <button
+                    onclick="copyReferralCode(document.getElementById('user-referral-code').textContent)"
+                    id="copy-button"
+                    class="button button-primary"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"
+                      ></path>
+                    </svg>
+                    Copy
+                  </button>
+                </div>
+              </div>
+              <p class="welcome-hint">
+                Share your code with friends and earn 10 points for each
+                successful referral!
+              </p>
+            </div>
+            <!-- Welcome Message End -->
+          </div>
+
+          <div class="card">
+            <h2 class="card-title">How It Works</h2>
+            <div class="instructions-grid">
+              <div class="instruction-card fade-in">
+                <div class="instruction-number">1</div>
+                <h3 class="instruction-title">Sign Up</h3>
+                <p class="instruction-description">
+                  Create your account and get a unique referral code
+                </p>
+              </div>
+
+              <div class="instruction-card fade-in">
+                <div class="instruction-number">2</div>
+                <h3 class="instruction-title">Share Your Code</h3>
+                <p class="instruction-description">
+                  Invite friends using your personal referral code
+                </p>
+              </div>
+
+              <div class="instruction-card fade-in">
+                <div class="instruction-number">3</div>
+                <h3 class="instruction-title">Earn Rewards</h3>
+                <p class="instruction-description">
+                  Get 10 points for each successful referral
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-text">Zynta Developer Assessment • Chibuzo Madumere</p>
+      </div>
+    </footer>
+
+    <!-- Toast Container -->
+    <div id="toast-container"></div>
+
+    <script>
+      const API_BASE = "/api";
+
+      // Local users array for client-side operations (populated from server)
+      let users = [];
+
+      // Load users from server on page load
+      async function loadUsers() {
+        try {
+          const response = await fetch(`${API_BASE}/users`);
+          const result = await response.json();
+
+          if (result.success) {
+            users = result.data;
+          } else {
+            console.error("Failed to load users:", result.error);
+          }
+        } catch (error) {
+          console.error("Error loading users:", error);
+        }
+      }
+
+      // Function to Show toast notification
+      function showToast(message, type = "success") {
+        const toast = document.createElement("div");
+        toast.className = `toast ${type}`;
+        toast.innerHTML = `
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        ${
+                          type === "success"
+                            ? '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>'
+                            : '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>'
+                        }
+                    </svg>
+                    <span>${message}</span>
+                </div>
+            `;
+
+        document.getElementById("toast-container").appendChild(toast);
+
+        setTimeout(() => toast.classList.add("show"), 100);
+
+        setTimeout(() => {
+          toast.classList.remove("show");
+          setTimeout(() => toast.remove(), 300);
+        }, 3000);
+      }
+
+      // Function to Copy referral code to clipboard
+      function copyReferralCode(code) {
+        navigator.clipboard
+          .writeText(code)
+          .then(() => {
+            showToast(`Referral code "${code}" copied to clipboard!`);
+            document.getElementById("copy-button").innerText = "Copied";
+          })
+          .catch(() => {
+            showToast("Failed to copy referral code", "error");
+          });
+      }
+
+      // Function to Validate form data (client-side)
+      function validateForm(formData) {
+        if (!formData.name.trim()) {
+          return { isValid: false, message: "Name is required" };
+        }
+
+        if (!formData.email.trim()) {
+          return { isValid: false, message: "Email is required" };
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(formData.email)) {
+          return {
+            isValid: false,
+            message: "Please enter a valid email address",
+          };
+        }
+
+        return { isValid: true };
+      }
+
+      // Function to Handle form submission with server integration
+      async function handleSubmit(event) {
+        event.preventDefault();
+
+        const submitBtn = document.getElementById("submit-btn");
+        const originalText = submitBtn.innerHTML;
+
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="animation: spin 1s linear infinite;">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                </svg>
+                Creating Account...
+            `;
+
+        const formData = {
+          name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          referralCode: document.getElementById("referralCode").value.trim(),
+        };
+
+        // Trigger Client-side validation
+        const validation = validateForm(formData);
+        if (!validation.isValid) {
+          showToast(validation.message, "error");
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+          return;
+        }
+
+        try {
+          // Make API call to register user
+          const response = await fetch(`${API_BASE}/register`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          });
+
+          const result = await response.json();
+
+          if (result.success) {
+            // Hide register form and show welcome message
+            const form = document.getElementById("referral-form");
+            const welcomeMessage = document.getElementById("welcome-message");
+            const referralCodeElement =
+              document.getElementById("user-referral-code");
+
+            // Set the referral code in the welcome message
+            referralCodeElement.textContent = result.data.user.referralCode;
+
+            form.style.display = "none";
+            welcomeMessage.style.display = "block";
+
+            // Show success message
+            showToast(result.message);
+
+            // Update local users array
+            await loadUsers();
+
+            // Reset form (but keep it hidden)
+            form.reset();
+          } else {
+            // Show server error message
+            showToast(result.error, "error");
+          }
+        } catch (error) {
+          console.error("Registration error:", error);
+          showToast("Error! Could not Register. Try Again");
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+        }
+      }
+
+      // Initialize app
+      document.addEventListener("DOMContentLoaded", function () {
+        // Load initial data from server
+        loadUsers();
+
+        // Auto-uppercase referral code input
+        const referralCodeInput = document.getElementById("referralCode");
+        if (referralCodeInput) {
+          referralCodeInput.addEventListener("input", (e) => {
+            e.target.value = e.target.value.toUpperCase();
+          });
+        }
+
+        // Registration form submit handler
+        document
+          .getElementById("referral-form")
+          .addEventListener("submit", handleSubmit);
+      });
+    </script>
+  </body>
+</html>
